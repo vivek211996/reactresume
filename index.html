@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel = "stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+	</head>
+	<body>
+        <div id = "links"></div>
+        <div id = "main"></div>
+        <div id = "objective"></div>
+        <div id = "about"></div>
+        <div id = "education"></div>
+        <div id = "edu"></div>
+        <div id = "Acourses"></div>
+        <div id = "contact"></div>
+        
+        <script type="text/babel">
+         var mainlinks=(
+            <div>
+            <ul >
+                <li class="mainlink"><a href="#about">About</a></li>
+                <li class="mainlink"><a href="#education">Education</a></li>
+                <li class="mainlink"><a href="#objective">Resume</a></li>
+                <li class="mainlink"><a href="#contact">Contact</a></li>
+            </ul>
+            </div>    
+        );
+         var head1 = React.createElement("h1",{id: "t1",className:"name"},"VIVEKANANDHAN.P");
+        ReactDOM.render(head1,document.getElementById("main"));
+        ReactDOM.render(mainlinks,document.getElementById("links"));
+        
+        var function1 = ({value}) => React.createElement("h2",{className:"h2s"},value);
+        var function2 = ({value}) => React.createElement("p",{id:"p1",className:"paras"},value);
+        var function3 = ({value}) => React.createElement("h3",{id:"h3s",className:"sh"},value);
+        var function4 = ({value}) => React.createElement("ul",{className:"uls",children:[React.createElement("li"),value]});
+        
+        
+        var head2= React.createElement("div",{id: "div2",className:"obj", children : 
+        [ 
+        function1({value:"Career objective"}),
+        function2({value:"To give the best with the skills, experience and education that I pursued"}), 
+        function1({value:"Language Skills"}),
+        function2({value:"Cambridge English Level 1 Certificate in ESOL International (Business Vantage) in Business English Certificate Vantage"}),
+        function1({value:"Technical skills"}),
+        function3({value:"Languages"}),function4({value:"C"}),function4({value:"C++"}),function4({value:"Java"}),function4({value:"Javascript"}),
+        function3({value:"DBMS"}),function4({value:"SQL Server (Intermediate)"}),
+        function3({value:"OTHERS"}),function4({value:"Android application development in Eclipse"}),function4({value:"Frontend development"}),
+        ]
+        });
+        ReactDOM.render(head2,document.getElementById("objective"));
+
+        var about= React.createElement("div",{id: "div3",className:"about", children : 
+        [ 
+        function1({value:"About me"}),
+        function2({value:"I am a talented, ambitious and hardworking individual, with broad skills and experience in digital and printed marketing, social media and leading projects"}),
+        function2({value:"Furthermore, I am adept at handling multiple tasks on a daily basis competently and at working well under pressure"}),
+        function2({value:"A key strength is communication; building strong relationships with people in order to deliver the best results."}),        
+        ]
+        });
+        ReactDOM.render(about,document.getElementById("about"));
+       
+
+        var function5 = ({val1,val2,val3}) => React.createElement("tr",{className:"trs",
+        children:[React.createElement("td"),val1,React.createElement("td"),val2,React.createElement("td"),val3 ]}
+        );
+var edu = function1({value:"EDUCATION"})
+ReactDOM.render(edu,document.getElementById("education"));
+        var etable= React.createElement("table",{id: "table1",className:"edu", children : 
+        [ function5({val1:"COURSE",val2:"INSTITUTION",val3:"MARKS"}),function5({val1:"B.E",val2:"KCG College of tech",val3:"60%"}),
+        function5({val1:"HSC",val2:"SGHV mat. hr sec school",val3:"70%"})
+        ,function5({val1:"SSLC",val2:"SGHV mat. hr sec school",val3:"90%"})]})
+     ReactDOM.render(etable,document.getElementById("edu"));
+     var Acourses=
+     (
+         <div>
+     <h2>Addon courses</h2>
+<p class ="courses">
+<li>Oracle certified  core Java course at Eye Open Technologies, Chennai.</li>
+<li>Android Application development course in UNIQ Technologies, Chennai. </li>
+<li>Android Application development course in UNIQ Technologies, Chennai.</li>
+<li>Cyber-Security course in KCG college of Technology.</li>
+<li>Cambridge English Level 1 Certificate in ESOL International (Business Vantage) in Business English Certificate Vantage.</li>
+</p>
+</div>
+     )
+     ReactDOM.render(Acourses,document.getElementById("Acourses"));
+
+     
+     var contact=(
+            <div>
+                <h2>Contact</h2>
+                <p class="contactme">
+                    <li>Location:Chennai</li>
+                    <li><a class="anchorstyle"href = "mailto:vivekanandhan0621@gmail.com">vivekanandhan0621@gmail.com</a></li>
+                    <li>PH:9176708891</li>
+                </p>
+            </div>
+
+        )
+        ReactDOM.render(contact,document.getElementById("contact"));
+            
+
+    </script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-style: inset;
+    
+}
+.mainlink{
+    padding: 20px;
+    display: inline-block;
+}
+
+.obj{
+    background-color: azure;
+}
+.name{
+    position: relative;
+text-align: center;
+
+}
+.uls{
+    position: relative;;
+    left: 20px;
+    display: inline;
+}
+table, td {
+    
+    border: 1px solid black;
+   padding: 10px;
+  }
+.trs{
+  
+    
+    font-size: 30px;
+}
+.courses{
+    position: relative;;
+    left: 20px;
+    display: inline;
+}
+.contactme{
+    position: relative;;
+    left: 20px;
+    display: inline;
+}
